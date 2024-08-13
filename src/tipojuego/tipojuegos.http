@@ -1,0 +1,37 @@
+### obtener todos los tipos de juegos src/app.ts(14,01)
+GET http://localhost:2000/api/tipojuegos
+
+### obtener un tipodejuego src/app.ts(19,01)
+GET http://localhost:2000/api/tipojuegos/344213
+
+### crear un nuevo tipo de juego src/app.ts(27,01)
+POST http://localhost:2000/api/tipojuegos
+Content-Type: application/json
+
+{
+  "nombre": "nuevo sgo",
+  "descripcion": "holalala",
+  "id":"1234"
+}
+
+### modificar un tipo de juego (put: idempotente, y patch)
+PUT http://localhost:2000/api/tipojuegos/1234
+Content-Type: application/json
+
+{
+  "nombre": "lol",
+  "descripcion": "el meajor juego de toda la vida" 
+}
+
+
+### modificar un tipo de juego (recursos parciales)
+PATCH  http://localhost:2000/api/tipojuegos/344213
+Content-Type: application/json
+
+{
+  "nombre": "loasl",
+  "descripcion": "asertd" 
+}
+
+### borrar un tipo de juego
+DELETE  http://localhost:2000/api/tipojuegos/1234
