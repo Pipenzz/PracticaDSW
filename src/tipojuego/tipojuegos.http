@@ -1,0 +1,36 @@
+### obtener todos los tipos de juegos src/app.ts(14,01)
+GET http://localhost:3000/api/tipojuegos
+
+### obtener un tipodejuego src/app.ts(19,01)
+GET http://localhost:3000/api/tipojuegos/66bbc415aaf3325f58d551de
+
+### crear un nuevo tipo de juego src/app.ts(27,01)
+POST http://localhost:3000/api/tipojuegos/
+Content-Type: application/json
+
+{
+  "nombre": "animal puchaina",
+  "descripcion": "equisde"
+}
+
+### modificar un tipo de juego (put: idempotente, y patch)
+PUT http://localhost:3000/api/tipojuegos/66bbc446055db94be285a1a9
+Content-Type: application/json
+
+{
+  "nombre": "nether update",
+  "descripcion": "se me cae el techo marica"
+}
+
+
+### modificar un tipo de juego (recursos parciales)
+PATCH  http://localhost:3000/api/tipojuegos/66bbc52404cea943e8aaf9ca
+Content-Type: application/json
+
+{
+  "nombre": "funciona",
+  "descripcion": "nashe"
+}
+
+### borrar un tipo de juego
+DELETE  http://localhost:3000/api/tipojuegos/66bbc52404cea943e8aaf9ca
